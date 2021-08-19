@@ -1,11 +1,11 @@
 const Sequelize = require("sequelize");
 
 const DB = process.env.DB || "aviyel";
-const USER = process.env.USER || "root";
-const PASSWORD = process.env.PASSWORD || "root";
-const HOST = process.env.HOST || "localhost";
-const PORT = process.env.PORT || 3306;
-const DIALECT = process.env.DIALECT || "mariadb";
+const USER = process.env.DB_USER || "root";
+const PASSWORD = process.env.DB_PASSWORD || "root";
+const HOST = process.env.DB_HOST || "localhost";
+const PORT = process.env.DB_PORT || 3306;
+const DIALECT = process.env.DB_DIALECT || "mariadb";
 
 const sequelize = new Sequelize(DB, USER, PASSWORD, {
   host: HOST,
